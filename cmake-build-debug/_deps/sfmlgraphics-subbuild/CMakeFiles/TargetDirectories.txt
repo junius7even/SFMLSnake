@@ -1,0 +1,3 @@
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/sfmlgraphics-populate.dir
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/edit_cache.dir
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/rebuild_cache.dir

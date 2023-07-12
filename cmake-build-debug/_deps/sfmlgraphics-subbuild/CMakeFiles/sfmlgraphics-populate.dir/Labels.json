@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/sfmlgraphics-populate"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/sfmlgraphics-populate.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/CMakeFiles/sfmlgraphics-populate-complete.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-build.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-configure.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-download.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-install.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-patch.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-test.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfmlgraphics-subbuild/sfmlgraphics-populate-prefix/src/sfmlgraphics-populate-stamp/sfmlgraphics-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sfmlgraphics-populate"
+		],
+		"name" : "sfmlgraphics-populate"
+	}
+}

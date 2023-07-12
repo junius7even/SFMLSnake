@@ -1,0 +1,14 @@
+# Target labels
+ sfml-graphics-populate
+# Source files and their labels
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate-complete.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-build.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-configure.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-download.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-install.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-mkdir.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-patch.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-test.rule
+D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-update.rule

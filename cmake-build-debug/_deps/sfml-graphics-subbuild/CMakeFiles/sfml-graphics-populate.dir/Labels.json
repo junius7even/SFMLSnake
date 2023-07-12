@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/CMakeFiles/sfml-graphics-populate-complete.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-build.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-configure.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-download.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-install.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-patch.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-test.rule"
+		},
+		{
+			"file" : "D:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-graphics-subbuild/sfml-graphics-populate-prefix/src/sfml-graphics-populate-stamp/sfml-graphics-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sfml-graphics-populate"
+		],
+		"name" : "sfml-graphics-populate"
+	}
+}
