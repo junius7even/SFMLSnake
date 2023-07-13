@@ -21,6 +21,13 @@ Engine::Engine()
     moveApple();
 }
 
+int Engine::randomNumber(int min, int max) {
+    static std::random_device device;
+    std::mt19937 generator(device());
+    std::uniform_int_distribution<int> distribution(min, max);
+    return distribution(generator);
+}
+
 void Engine::run() {
     Clock clock; // is outside main loop
     // Main loop - Runs until the window closes
@@ -126,7 +133,7 @@ void Engine::moveApple() {
     // Must not be a location the snake is in or a wall
 
     // Divide field into sections the size of the apple, remove 2 to exclude exterior wall --> how many apples there can be on an axis
-    Vector2f appleResolution = Vector2f (resolution.x/20 - 2, resolution.y / 20 -2);
+    Vector2f applePerScreen = Vector2f (resolution.x/20 - 2, resolution.y / 20 -2);
     Vector2f newAppleLocation;
     bool badLocation = false;
     srand(time(nullptr));
@@ -134,8 +141,12 @@ void Engine::moveApple() {
     do {
         badLocation = false;
         // Generate random location
-        newAppleLocation.x = (float) (1 + rand()/((RAND_MAX + 1u)/(int)appleResolution.x)) * 20;
-        newAppleLocation.y = (float) (1 + rand()/((RAND_MAX + 1u)/(int)appleResolution.y)) * 20;
+
+        // Random number % (screnresolution.x / 20) [how many blocks of 20 there are horizontally on screen] = generate a number from 0 to that block count randomly. Then multiply by 20
+//        newAppleLocation.x = (float) (1 + rand()/((RAND_MAX + 1u)/(int)appleResolution.x)) * 20;
+
+        newAppleLocation.x = (float) (1 + randomNumber(0, INT32_MAX) % (int)(applePerScreen.x)) * 20;
+        newAppleLocation.y = (float) (1 + rand()/((RAND_MAX + 1u)/(int)applePerScreen.y)) * 20;
         // Check if it is in the snake
         for (auto &s: snake) {
             if (s.getShape().getGlobalBounds().intersects(Rect<float>(newAppleLocation.x, newAppleLocation.y, 20, 20))) {

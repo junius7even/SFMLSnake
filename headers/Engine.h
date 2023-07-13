@@ -5,6 +5,7 @@
 #ifndef GRAPHICSPROJECTS_ENGINE_H
 #define GRAPHICSPROJECTS_ENGINE_H
 #include <SFML/Graphics.hpp>
+#include <random>
 #include "SnakeSection.h"
 #include <vector>
 #include <deque>
@@ -29,7 +30,7 @@ private:
 
     apple apple;
     void moveApple();
-
+    int randomNumber(int min, int max);
     Time timeSinceLastMove;
 
 public:

@@ -1,11 +1,11 @@
 # ninja log v5
-3	346	7108217590901564	CMakeFiles/Junius7.dir/src/main.cpp.obj	c1b55e30f4d0edf0
-1	561	7108878199919462	build.ninja	6696baf62fb30525
-3	433	7108233840813499	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
+3	563	7109715305199898	CMakeFiles/Junius7.dir/src/main.cpp.obj	c1b55e30f4d0edf0
+1	561	7109717944756403	build.ninja	6696baf62fb30525
+2	525	7109715864685813	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
 83	1324	7107865259946813	_deps/sfml-graphics-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj	8bdba6052ad5a7f
 90	566	7107865252292405	_deps/sfml-graphics-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj	5168ef82365194c5
-7	334	7108217590781962	CMakeFiles/Junius7.dir/src/draw.cpp.obj	668daf85dec75ec7
-488	911	7108877678889108	Junius7.exe	f0c7f601a54f28a3
+11	559	7109715305160031	CMakeFiles/Junius7.dir/src/draw.cpp.obj	668daf85dec75ec7
+525	877	7109715867843924	Junius7.exe	319cbe38f78d9562
 6	90	7107865247548267	_deps/sfml-graphics-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj	e12526d51be05f59
 1241	2455	7108048023360352	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj	ba1345f04af27ae
 13	98	7107865247548267	_deps/sfml-graphics-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj	7fb03ce4dc4a9c06
@@ -127,6 +127,7 @@
 256	1241	7108048011231227	_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj	89a657539897be00
 39	1253	7108048011350829	_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj	fbb6cfe9f2c2fbcf
 600	1371	7108048012506966	_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj	a875099b75ad54f5
+11	478	7109157339618454	CMakeFiles/Junius7.dir/src/apple.cpp.obj	66813ac7c130471
 35	1495	7108048013742892	_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj	c9cbfe1ecebac68
 1100	1513	7108048013952243	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj	ed361432a1eb97bc
 483	1588	7108048014669838	_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj	3f6eabc0f0deadae
@@ -161,15 +162,5 @@
 2497	3762	7108048036489443	_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj	6e65f3a5efc4815a
 3899	4019	7108048039066571	_deps/sfml-build/lib/libsfml-window-s-d.a	5b2a6880c62b293d
 4019	4209	7108048040961993	_deps/sfml-build/lib/libsfml-graphics-s-d.a	779000f801813add
-15	356	7108217591011196	CMakeFiles/Junius7.dir/src/input.cpp.obj	359fe65185e5ffb3
+14	567	7109715305239764	CMakeFiles/Junius7.dir/src/input.cpp.obj	359fe65185e5ffb3
 3	487	7108877675037881	CMakeFiles/Junius7.dir/src/SnakeSection.cpp.obj	6a4ff95123593e38
-18	471	7109157339558655	CMakeFiles/Junius7.dir/src/draw.cpp.obj	668daf85dec75ec7
-13	476	7109157339598521	CMakeFiles/Junius7.dir/src/main.cpp.obj	c1b55e30f4d0edf0
-11	478	7109157339618454	CMakeFiles/Junius7.dir/src/apple.cpp.obj	66813ac7c130471
-21	478	7109157339638387	CMakeFiles/Junius7.dir/src/input.cpp.obj	359fe65185e5ffb3
-4	563	7109157340475586	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
-563	934	7109157343809322	Junius7.exe	319cbe38f78d9562
-2	446	7109159746003576	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
-446	806	7109159749252966	Junius7.exe	319cbe38f78d9562
-3	433	7109160411588795	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
-433	791	7109160414811172	Junius7.exe	319cbe38f78d9562
