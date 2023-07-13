@@ -205,7 +205,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Junius7::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Junius7-Debug-dc94f1e6b9587896fa65.json",
+					"jsonFile" : "target-Junius7-Debug-6671b48f7f84f7e7bdef.json",
 					"name" : "Junius7",
 					"projectIndex" : 0
 				},
@@ -219,7 +219,7 @@
 				{
 					"directoryIndex" : 7,
 					"id" : "sfml-graphics::@98af38147d5fa7e70f61",
-					"jsonFile" : "target-sfml-graphics-Debug-ec90a15c0b0d47145f9f.json",
+					"jsonFile" : "target-sfml-graphics-Debug-0531bdf23fdf7af30f70.json",
 					"name" : "sfml-graphics",
 					"projectIndex" : 1
 				},

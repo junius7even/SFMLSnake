@@ -8,6 +8,7 @@ SnakeSection::SnakeSection(Vector2f startPosition) {
     section.setSize(Vector2f(20, 20));
     section.setFillColor(Color::Green);
     section.setPosition(startPosition);
+    position = startPosition;
 }
 
 void SnakeSection::setPosition(Vector2f newPosition) {

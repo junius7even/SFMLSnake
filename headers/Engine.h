@@ -8,6 +8,7 @@
 #include "SnakeSection.h"
 #include <vector>
 #include <deque>
+#include "apple.h"
 
 using namespace std;
 using namespace sf;
@@ -24,6 +25,10 @@ private:
     int snakeDirection;
     deque<int> directionQueue;
     int speed;
+    int sectionsToAdd;
+
+    apple apple;
+    void moveApple();
 
     Time timeSinceLastMove;
 

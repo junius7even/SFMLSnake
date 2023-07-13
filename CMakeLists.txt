@@ -18,7 +18,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(sfml)
 
-add_executable(Junius7 src/Input.cpp src/SnakeSection.cpp)
+add_executable(Junius7 src/Input.cpp src/SnakeSection.cpp src/apple.cpp src/apple.h)
 
 target_include_directories(Junius7 PUBLIC headers)
 

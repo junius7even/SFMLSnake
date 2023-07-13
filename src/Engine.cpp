@@ -16,7 +16,9 @@ Engine::Engine()
 
     timeSinceLastMove = Time::Zero;
 
+    sectionsToAdd = 0;
     newSnake();
+    moveApple();
 }
 
 void Engine::run() {
@@ -60,6 +62,13 @@ void Engine::update() {
             }
             directionQueue.pop_front();
         }
+        // Do we need to grow the snake
+        // Grows the snake one move at a time
+        if (sectionsToAdd) {
+            addSnakeSection();
+            sectionsToAdd--;
+        }
+
         // Update snake head and tail positions
         switch (snakeDirection) {
             case Direction::UP:
@@ -86,6 +95,15 @@ void Engine::update() {
             s.update();
         }
 
+        // Collision detection -- apple
+        if (snake[0].getShape().getGlobalBounds().intersects(apple.getSprite().getGlobalBounds())) {
+            // We hit the apple. Increase snake length, increase speed, and move the apple
+            // TODO: increment score, apples eaten, and check if its time for the next level
+            sectionsToAdd += 4;
+            speed++;
+            moveApple();
+        }
+
         timeSinceLastMove = Time::Zero;
     } // End update snake positions
 }
@@ -101,4 +119,32 @@ void Engine::addSnakeSection() {
     // Add section at the same position as the last section of the snake.
     Vector2f newSectionPosition = snake[snake.size() - 1].getPosition();
     snake.emplace_back(newSectionPosition);
+}
+
+void Engine::moveApple() {
+    // Find a location to place the apple
+    // Must not be a location the snake is in or a wall
+
+    // Divide field into sections the size of the apple, remove 2 to exclude exterior wall --> how many apples there can be on an axis
+    Vector2f appleResolution = Vector2f (resolution.x/20 - 2, resolution.y / 20 -2);
+    Vector2f newAppleLocation;
+    bool badLocation = false;
+    srand(time(nullptr));
+    // Loop until we find a valid location
+    do {
+        badLocation = false;
+        // Generate random location
+        newAppleLocation.x = (float) (1 + rand()/((RAND_MAX + 1u)/(int)appleResolution.x)) * 20;
+        newAppleLocation.y = (float) (1 + rand()/((RAND_MAX + 1u)/(int)appleResolution.y)) * 20;
+        // Check if it is in the snake
+        for (auto &s: snake) {
+            if (s.getShape().getGlobalBounds().intersects(Rect<float>(newAppleLocation.x, newAppleLocation.y, 20, 20))) {
+                badLocation = true;
+                break;
+            }
+        }
+    }
+    while (badLocation);
+
+    apple.setPosition(newAppleLocation);
 }

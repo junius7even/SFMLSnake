@@ -65,6 +65,14 @@ build CMakeFiles/Junius7.dir/src/SnakeSection.cpp.obj: CXX_COMPILER__Junius7_Deb
   OBJECT_DIR = CMakeFiles\Junius7.dir
   OBJECT_FILE_DIR = CMakeFiles\Junius7.dir\src
 
+build CMakeFiles/Junius7.dir/src/apple.cpp.obj: CXX_COMPILER__Junius7_Debug D$:/GraphicsProjects/Junius7/src/apple.cpp || cmake_object_order_depends_target_Junius7
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\Junius7.dir\src\apple.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Wpedantic -std=c++17
+  INCLUDES = -ID:/GraphicsProjects/Junius7/headers -ID:/GraphicsProjects/Junius7/cmake-build-debug/_deps/sfml-src/include
+  OBJECT_DIR = CMakeFiles\Junius7.dir
+  OBJECT_FILE_DIR = CMakeFiles\Junius7.dir\src
+
 build CMakeFiles/Junius7.dir/src/main.cpp.obj: CXX_COMPILER__Junius7_Debug D$:/GraphicsProjects/Junius7/src/main.cpp || cmake_object_order_depends_target_Junius7
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\Junius7.dir\src\main.cpp.obj.d
@@ -97,7 +105,7 @@ build CMakeFiles/Junius7.dir/src/draw.cpp.obj: CXX_COMPILER__Junius7_Debug D$:/G
 #############################################
 # Link the executable Junius7.exe
 
-build Junius7.exe: CXX_EXECUTABLE_LINKER__Junius7_Debug CMakeFiles/Junius7.dir/src/input.cpp.obj CMakeFiles/Junius7.dir/src/SnakeSection.cpp.obj CMakeFiles/Junius7.dir/src/main.cpp.obj CMakeFiles/Junius7.dir/src/Engine.cpp.obj CMakeFiles/Junius7.dir/src/draw.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfmlgraphics-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build Junius7.exe: CXX_EXECUTABLE_LINKER__Junius7_Debug CMakeFiles/Junius7.dir/src/input.cpp.obj CMakeFiles/Junius7.dir/src/SnakeSection.cpp.obj CMakeFiles/Junius7.dir/src/apple.cpp.obj CMakeFiles/Junius7.dir/src/main.cpp.obj CMakeFiles/Junius7.dir/src/Engine.cpp.obj CMakeFiles/Junius7.dir/src/draw.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfmlgraphics-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/sfml-build/lib/libsfml-window-s-d.a  _deps/sfml-build/lib/libsfml-system-s-d.a  -lopengl32  -lwinmm  -lgdi32  _deps/sfmlgraphics-src/extlibs/libs-mingw/x64/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Junius7.dir

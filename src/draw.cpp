@@ -6,6 +6,10 @@ void Engine::draw()
 {
     // Clears the window to a certain color
     window.clear(Color::Black);
+
+    // Draw apple
+    window.draw(apple.getSprite());
+
     // Draw snake sections
     for (auto & s: snake) {
         window.draw(s.getShape());
