@@ -10,6 +10,11 @@ void Engine::draw()
     // Draw apple
     window.draw(apple.getSprite());
 
+    // Draw walls
+    for (auto & w : wallSections) {
+        window.draw(w.getShape());
+    }
+
     // Draw snake sections
     for (auto & s: snake) {
         window.draw(s.getShape());

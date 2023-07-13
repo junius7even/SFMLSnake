@@ -18,7 +18,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(sfml)
 
-add_executable(Junius7 src/Input.cpp src/SnakeSection.cpp src/apple.cpp src/Engine.cpp src/Engine.cpp)
+add_executable(Junius7 src/Input.cpp src/SnakeSection.cpp src/apple.cpp src/Engine.cpp src/Wall.cpp)
 
 target_include_directories(Junius7 PUBLIC headers)
 
@@ -29,6 +29,8 @@ target_sources(Junius7 PRIVATE
         src/Engine.cpp
         src/draw.cpp
         src/input.cpp
+        src/apple.cpp
+        src/Wall.cpp
         )
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL Clang OR CMAKE_CXX_COMPILER_ID STREQUAL GNU)

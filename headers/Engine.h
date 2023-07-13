@@ -10,6 +10,7 @@
 #include <vector>
 #include <deque>
 #include "apple.h"
+#include "Wall.h"
 
 using namespace std;
 using namespace sf;
@@ -30,11 +31,21 @@ private:
 
     apple apple;
     void moveApple();
+    void checkLevelFiles();
     int randomNumber(int min, int max);
     Time timeSinceLastMove;
 
+    int currentGameState;
+    int lastGameState;
+
+    vector <Wall> wallSections;
+    int currentLevel;
+    int maxLevels;
+    vector<string> levels;
+
 public:
     enum Direction {UP, RIGHT, DOWN, LEFT};
+    enum GameState {RUNNING, PAUSED, GAMEOVER};
     Engine();
     void addDirection(int newDirection);
     void update();
@@ -44,6 +55,9 @@ public:
     void addSnakeSection();
     // Main loop will be in the run function
     void run();
+    void togglePause();
+    void loadLevel(int levelNumber);
+    void startGame();
 };
 
 

@@ -3,6 +3,8 @@
 //
 
 #include "Engine.h"
+#include <fstream>
+using namespace std;
 const sf::Time Engine::TimePerFrame = seconds(1.f/60);
 
 Engine::Engine()
@@ -10,15 +12,22 @@ Engine::Engine()
     resolution = Vector2f (800, 600);
     window.create(VideoMode(resolution.x, resolution.y), "Junius7", Style::Default);
     window.setFramerateLimit(FPS);
+    checkLevelFiles();
+    startGame();
+}
 
+void Engine::startGame() {
+    currentLevel = 1;
+    loadLevel(currentLevel);
     speed = 2;
     snakeDirection = Direction::RIGHT;
-
     timeSinceLastMove = Time::Zero;
-
     sectionsToAdd = 0;
+    directionQueue.clear();
     newSnake();
     moveApple();
+    currentGameState = GameState::RUNNING;
+    lastGameState = currentGameState;
 }
 
 int Engine::randomNumber(int min, int max) {
@@ -34,11 +43,68 @@ void Engine::run() {
     while (window.isOpen())
     {
         Time dt = clock.restart();
+
+        if (currentGameState == GameState::PAUSED || currentGameState == GameState::GAMEOVER) {
+            // If we are paused, then check for input (so we can un-pause) then continue to next loop
+            input();
+
+            // Draw GameOver screen
+            if (currentGameState == GameState::GAMEOVER) {
+                draw();
+            }
+
+            sleep (milliseconds(2)); // So we don't bug the cpu
+            continue;
+        }
+
         timeSinceLastMove += dt;
         input();
         update();
         draw();
     }
+}
+
+void Engine::togglePause() {
+    if (currentGameState == GameState::RUNNING) {
+        lastGameState = currentGameState;
+        currentGameState = GameState::PAUSED;
+    }
+    else if (currentGameState == GameState::PAUSED) {
+        currentGameState = lastGameState;
+    }
+}
+
+void Engine::checkLevelFiles() {
+    // Load levels manifest file
+    ifstream levelsManifest ("../assets/levels/levels.txt");
+    ifstream testFile;
+    for (string manifestLine; getline(levelsManifest, manifestLine);) {
+        // Check that we can open the level file
+        testFile.open("../assets/levels/" + manifestLine);
+        if (testFile.is_open()) {
+            // the level file opens, add it to available levels
+            levels.emplace_back("../assets/levels/" + manifestLine);
+            testFile.close();
+            maxLevels++;
+        }
+    }
+}
+
+void Engine::loadLevel(int levelNumber) {
+    string levelFile = levels[levelNumber - 1];
+    ifstream level (levelFile);
+    string line;
+    if (level.is_open()) {
+        for (int y = 0; y < 30; y++)
+        {
+            getline(level, line);
+            for (int x = 0; x < 40; x++) {
+                if (line[x] == 'x')
+                    wallSections.emplace_back(Wall(Vector2f(x * 20, y * 20), Vector2f(20, 20)));
+            }
+        }
+    }
+    level.close();
 }
 
 void Engine::update() {
@@ -111,6 +177,18 @@ void Engine::update() {
             moveApple();
         }
 
+        // Collision detection -- wall
+        for (int w = 0; w < wallSections.size(); w++) {
+            if (wallSections[w].getShape().getGlobalBounds().intersects(snake[0].getShape().getGlobalBounds()))
+                currentGameState = GameState::GAMEOVER;
+        }
+
+        // Collision detection - snake body
+        for (int s = 1; s < snake.size(); s++) {
+            if (snake[0].getShape().getGlobalBounds().intersects(snake[s].getShape().getGlobalBounds()))
+                currentGameState = GameState::GAMEOVER;
+        }
+
         timeSinceLastMove = Time::Zero;
     } // End update snake positions
 }
@@ -150,6 +228,14 @@ void Engine::moveApple() {
         // Check if it is in the snake
         for (auto &s: snake) {
             if (s.getShape().getGlobalBounds().intersects(Rect<float>(newAppleLocation.x, newAppleLocation.y, 20, 20))) {
+                badLocation = true;
+                break;
+            }
+        }
+
+        // Check if it is in the walls
+        for (auto &w: wallSections) {
+            if (w.getShape().getGlobalBounds().intersects(Rect<float>(newAppleLocation.x, newAppleLocation.y, 20, 20))) {
                 badLocation = true;
                 break;
             }

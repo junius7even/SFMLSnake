@@ -19,6 +19,17 @@ void Engine::input()
                 window.close();
             }
 
+            // Pause
+            if (event.key.code == Keyboard::P) {
+                togglePause();
+            }
+
+            // New game
+            if (currentGameState == GameState::GAMEOVER) {
+                if (event.key.code == Keyboard::Enter)
+                    startGame();
+            }
+
             // Direction
             if (event.key.code == Keyboard::Up) {
                 addDirection(Direction::UP);
