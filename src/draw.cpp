@@ -15,6 +15,18 @@ void Engine::draw()
         window.draw(w.getShape());
     }
 
+    // Draw Text
+    window.draw(titleText);
+    window.draw(currentLevelText);
+    window.draw(applesEatenText);
+    window.draw(scoreText);
+
+    // Gameover text
+    if (currentGameState == GameState::GAMEOVER) {
+        window.draw(gameOverText);
+        window.draw(pressEnterText);
+    }
+
     // Draw snake sections
     for (auto & s: snake) {
         window.draw(s.getShape());

@@ -28,9 +28,22 @@ private:
     deque<int> directionQueue;
     int speed;
     int sectionsToAdd;
+    int applesEatenThisLevel;
+    int applesEatenTotal;
+    unsigned long long int score;
 
     apple apple;
+
+    Font mainFont;
+    Text titleText;
+    Text applesEatenText;
+    Text currentLevelText;
+    Text scoreText;
+    Text gameOverText;
+    Text pressEnterText;
+
     void moveApple();
+    void beginNextLevel();
     void checkLevelFiles();
     int randomNumber(int min, int max);
     Time timeSinceLastMove;
@@ -58,6 +71,7 @@ public:
     void togglePause();
     void loadLevel(int levelNumber);
     void startGame();
+    static void setupText(Text *textItem, const Font &font, const string &value, int size, Color colour);
 };
 
 
