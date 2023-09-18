@@ -1,6 +1,6 @@
 # ninja log v5
 6	449	7122954481868676	CMakeFiles/Junius7.dir/src/main.cpp.obj	c1b55e30f4d0edf0
-1	540	7135122425105608	build.ninja	6696baf62fb30525
+1	540	7167004787497426	build.ninja	6696baf62fb30525
 3	672	7122954484078683	CMakeFiles/Junius7.dir/src/Engine.cpp.obj	41697592fe260045
 83	1324	7107865259946813	_deps/sfml-graphics-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj	8bdba6052ad5a7f
 90	566	7107865252292405	_deps/sfml-graphics-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj	5168ef82365194c5

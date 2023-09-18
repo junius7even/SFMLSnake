@@ -10,6 +10,7 @@ set(BUILD_SHARED_LIBS OFF)  # this will force SFML to build static libraries
 
 # use FetchContent to obtain SFML source
 include(FetchContent)
+include(header_list.cmake)
 FetchContent_Declare(
         sfml
         GIT_REPOSITORY https://github.com/SFML/SFML
